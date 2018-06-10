@@ -1,0 +1,36 @@
+{
+  "name": "anvil",
+  "version": "0.1.0",
+  "description": "A component loader for DOM scripting",
+  "main": "dist/anvil",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.0.1",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.7.0",
+    "babelrc-rollup": "^3.0.0",
+    "eslint": "^4.19.1",
+    "jest": "^22.4.4",
+    "prettier": "^1.13.4",
+    "rollup": "^0.59.4",
+    "rollup-plugin-babel": "^3.0.4",
+    "rollup-plugin-uglify": "^4.0.0"
+  },
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "node ./node_modules/rollup/bin/rollup -c ./rollup.dev.js",
+    "build": "node ./node_modules/rollup/bin/rollup -c ./rollup.prod.js",
+    "test": "node ./node_modules/jest/bin/jest.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/themeworkshop/anvil.git"
+  },
+  "author": "Craig Morrison <craig@doublethink.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/themeworkshop/anvil/issues"
+  },
+  "homepage": "https://github.com/themeworkshop/anvil#readme"
+}
