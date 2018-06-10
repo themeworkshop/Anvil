@@ -1,5 +1,5 @@
 {
-  "name": "anvil",
+  "name": "@themeworkshop/anvil",
   "version": "0.1.0",
   "description": "A component loader for DOM scripting",
   "main": "dist/anvil",
