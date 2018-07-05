@@ -3,9 +3,8 @@
     [
       "env",
       {
-        "modules": false
+        "modules": "commonjs"
       }
     ]
-  ],
-  "plugins": ["external-helpers"]
+  ]
 }
