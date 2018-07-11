@@ -9,7 +9,7 @@ const entryFile = 'src/anvil.js';
 const configs = [
   {
     name: 'Anvil',
-    format: 'iife',
+    format: 'umd',
     fileName: 'anvil',
     fileExt: '.js',
     plugins: [
