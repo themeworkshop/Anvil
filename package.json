@@ -1,6 +1,6 @@
 {
   "name": "@themeworkshop/anvil",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A component loader for DOM scripting",
   "main": "dist/anvil",
   "dependencies": {
@@ -8,7 +8,7 @@
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
-    "babel-jest": "^23.2.0",
+    "babel-jest": "^23.4.0",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.7.0",
     "babelrc-rollup": "^3.0.0",
