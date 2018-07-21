@@ -62,3 +62,6 @@ typings/
 
 # Output
 dist
+
+# Rollup
+.rpt2_cache/

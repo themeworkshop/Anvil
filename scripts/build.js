@@ -2,10 +2,10 @@
 'use strict';
 
 const rollup = require('rollup');
-const babel = require('rollup-plugin-babel');
+const typescript = require('rollup-plugin-typescript2');
 const { terser } = require('rollup-plugin-terser');
 
-const entryFile = 'src/anvil.js';
+const entryFile = 'src/anvil.ts';
 const configs = [
   {
     name: 'Anvil',
@@ -13,19 +13,8 @@ const configs = [
     fileName: 'anvil',
     fileExt: '.js',
     plugins: [
-      babel({
-        babelrc: false,
-        presets: {
-          presets: [
-            [
-              'env',
-              {
-                modules: false
-              }
-            ]
-          ],
-          plugins: ['external-helpers']
-        }
+      typescript({
+        clean: true
       }),
       terser()
     ]
@@ -34,7 +23,17 @@ const configs = [
     format: 'es',
     fileName: 'anvil',
     fileExt: '.mjs',
-    plugins: [terser()]
+    plugins: [
+      typescript({
+        clean: true,
+        tsconfigOverride: {
+          compilerOptions: {
+            target: 'ES2015'
+          }
+        }
+      }),
+      terser()
+    ]
   }
 ];
 
