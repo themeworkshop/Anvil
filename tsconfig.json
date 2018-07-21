@@ -1,5 +1,5 @@
 {
-  "rootDir": "./src",
+  "rootDir": "./",
   "exclude": ["node_modules", "**/*.spec.ts"],
   "compilerOptions": {
     "module": "ES2015",

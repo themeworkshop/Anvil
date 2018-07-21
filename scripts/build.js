@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 'use strict';
 
 const rollup = require('rollup');
