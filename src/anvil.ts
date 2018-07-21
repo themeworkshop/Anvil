@@ -20,8 +20,6 @@ class Anvil {
       `[data-component="${selector}"]`
     );
 
-    console.log(matchedElements);
-
     if (matchedElements.length > 0) {
       for (let i = 0; i < matchedElements.length; i++) {
         this.components[`${selector}-${i}`] = new ComponentConstructor(
