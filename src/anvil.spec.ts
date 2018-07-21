@@ -26,10 +26,10 @@ const noComponentHTML = `
   </html>
 `;
 
-class mockComponent {
+class MockComponent {
   content: string;
 
-  constructor(index, element) {
+  constructor(_index, element) {
     this.content = element.textContent;
   }
 }
@@ -43,14 +43,14 @@ describe('Anvil', () => {
   it('will bind the component to a DOM element', () => {
     document.write(componentHTML);
     const anvil = new Anvil();
-    anvil.register('mock-component', mockComponent);
+    anvil.register('mock-component', MockComponent);
     expect(anvil.components).toHaveProperty('mock-component-0');
   });
 
   it('will not bind if there is no match DOM element', () => {
     document.write(noComponentHTML);
     const anvil = new Anvil();
-    anvil.register('mock-component', mockComponent);
+    anvil.register('mock-component', MockComponent);
     expect(anvil.components).toEqual({});
   });
 });

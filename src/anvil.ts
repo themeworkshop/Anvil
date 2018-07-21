@@ -1,15 +1,9 @@
-import {
-  Class,
-  BaseFunction,
-  ClassDeclaration
-} from '../node_modules/@types/estree/index';
-
 interface AnvilRegistration {
-  [key: string]: Object;
+  [key: string]: object;
 }
 
 interface AnvilComponent {
-  new (index: number, element: Element): Object;
+  new (index: number, element: Element): object;
 }
 
 class Anvil {
