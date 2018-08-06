@@ -48,7 +48,8 @@ configs.forEach(config =>
       bundle.write({
         name: config.name,
         file: `dist/${config.fileName}${config.fileExt}`,
-        format: config.format
+        format: config.format,
+        sourcemap: true
       })
     )
     .catch(err => console.log(err))
