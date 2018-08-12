@@ -3,6 +3,7 @@
   "version": "0.4.0",
   "description": "A component loader for DOM scripting",
   "main": "dist/anvil",
+  "types": "dist/anvil.d.ts",
   "dependencies": {},
   "devDependencies": {
     "@types/jest": "^23.3.0",
