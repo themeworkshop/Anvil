@@ -7,9 +7,9 @@ interface AnvilComponent {
 }
 
 interface AnvilConfig {
-  selector: string,
-  constructor: AnvilComponent,
-  options: object,
+  selector: string;
+  constructor: AnvilComponent;
+  options?: object;
 }
 
 class Anvil {

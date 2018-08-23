@@ -28,9 +28,11 @@ const noComponentHTML = `
 
 class MockComponent {
   content: string;
+  options: object;
 
-  constructor(_index, element) {
+  constructor(_index, element, options) {
     this.content = element.textContent;
+    this.options = options;
   }
 }
 
@@ -43,14 +45,37 @@ describe('Anvil', () => {
   it('will bind the component to a DOM element', () => {
     document.write(componentHTML);
     const anvil = new Anvil();
-    anvil.register('mock-component', MockComponent);
+    anvil.register({
+      selector: 'mock-component',
+      constructor: MockComponent
+    });
     expect(anvil.components).toHaveProperty('mock-component-0');
+  });
+
+  it('will pass options through to the component', () => {
+    document.write(componentHTML);
+    const anvil = new Anvil();
+    anvil.register({
+      selector: 'mock-component',
+      constructor: MockComponent,
+      options: {
+        testOption: 23,
+        testOption2: 'hello'
+      }
+    });
+
+    const component = anvil.components['mock-component-0'] as any;
+    expect(component.options.testOption).toBe(23);
+    expect(component.options.testOption2).toBe('hello');
   });
 
   it('will not bind if there is no match DOM element', () => {
     document.write(noComponentHTML);
     const anvil = new Anvil();
-    anvil.register('mock-component', MockComponent);
+    anvil.register({
+      selector: 'mock-component',
+      constructor: MockComponent
+    });
     expect(anvil.components).toEqual({});
   });
 });
