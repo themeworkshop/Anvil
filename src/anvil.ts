@@ -6,24 +6,27 @@ interface AnvilComponent {
   new (index: number, element: Element, options: object): object;
 }
 
+interface AnvilConfig {
+  selector: string,
+  constructor: AnvilComponent,
+  options: object,
+}
+
 class Anvil {
   components: AnvilRegistration = {};
 
-  register(
-    selector: string,
-    ComponentConstructor: AnvilComponent,
-    options: object = {}
-  ) {
+  register(config: AnvilConfig) {
+    const ComponentConstructor = config.constructor;
     const matchedElements: NodeListOf<Element> = document.querySelectorAll(
-      `[data-component="${selector}"]`
+      `[data-component="${config.selector}"]`
     );
 
     if (matchedElements.length > 0) {
       for (let i = 0; i < matchedElements.length; i++) {
-        this.components[`${selector}-${i}`] = new ComponentConstructor(
+        this.components[`${config.selector}-${i}`] = new ComponentConstructor(
           i,
           matchedElements[0],
-          options
+          config.options
         );
       }
     }
