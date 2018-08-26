@@ -1,4 +1,4 @@
-import Anvil from './anvil';
+import Anvil, { ComponentConfig } from './anvil';
 
 const componentHTML = `
   <html>
@@ -30,9 +30,9 @@ class MockComponent {
   content: string;
   options: object;
 
-  constructor(_index, element, options) {
-    this.content = element.textContent;
-    this.options = options;
+  constructor(config: ComponentConfig) {
+    this.content = config.element.textContent;
+    this.options = config.options;
   }
 }
 
