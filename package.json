@@ -6,16 +6,16 @@
   "types": "dist/anvil.d.ts",
   "dependencies": {},
   "devDependencies": {
-    "@types/jest": "^23.3.1",
-    "jest": "^23.5.0",
-    "prettier": "^1.14.2",
-    "rollup": "^0.64.1",
-    "rollup-plugin-terser": "^1.0.1",
-    "rollup-plugin-typescript2": "^0.16.1",
-    "ts-jest": "^23.1.4",
-    "tslint": "^5.11.0",
-    "tslint-config-prettier": "^1.15.0",
-    "typescript": "^3.0.1"
+    "@types/jest": "^24.0.15",
+    "jest": "^24.8.0",
+    "prettier": "^1.18.2",
+    "rollup": "^1.16.7",
+    "rollup-plugin-terser": "^5.1.1",
+    "rollup-plugin-typescript2": "^0.21.2",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.18.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.5.3"
   },
   "scripts": {
     "start": "npm run build",
