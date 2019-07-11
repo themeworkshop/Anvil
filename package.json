@@ -1,6 +1,6 @@
 {
   "name": "@themeworkshop/anvil",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A component loader for DOM scripting",
   "main": "dist/anvil",
   "types": "dist/anvil.d.ts",
